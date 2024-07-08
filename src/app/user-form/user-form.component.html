@@ -1,0 +1,30 @@
+<div class="shadow p-4 border">
+    <h2 class="text-xl font-semibold">Add User</h2>
+    <form [formGroup]="userForm">
+        <div class="flex flex-wrap">
+                <mat-form-field class="w-full">
+                  <mat-label>Name</mat-label>
+                  <input matInput  type="text" formControlName="name">
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                  <mat-label>Email</mat-label>
+                  <input matInput  type="email" formControlName="email">
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                  <mat-label>Password</mat-label>
+                  <input matInput  type="password" formControlName="password">
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                  <mat-label>Age</mat-label>
+                  <input matInput  type="number" formControlName="age">
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                  <mat-label>Address</mat-label>
+                  <input matInput  type="text" formControlName="address">
+                </mat-form-field>
+        </div>
+        <div class="flex justify-center">
+            <button (click)="addUser()">Add User</button>
+        </div>
+    </form>
+</div>

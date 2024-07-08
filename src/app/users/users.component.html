@@ -1,0 +1,31 @@
+<div class="shadow p-4 border border-red-700 bg-gray-100">
+    <div class="flex justify-between p-4">
+        <h2 class="text-xl font-semibold">Users Data</h2>
+        <button mat-stroked-button color="primary" routerLink="/users/add">Add</button>
+    </div>
+    <table >
+        <thead class="border-yellow-600 border-2">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="border-2 border-orange-600 ">
+            @for(user of users; track $index){
+                <tr class="border-2 rounded-md border-black">
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.address}}</td>
+                    <td>
+                        <button mat-raised-button color="warning">Edit</button>
+                        <button mat-raised-button color="danger">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
